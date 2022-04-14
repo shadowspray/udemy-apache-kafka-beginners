@@ -2,3 +2,9 @@
   uses: actions/checkout@v3
   with:
     fetch-depth: 0 # This is a required field for CodeGuru
+
+- name: CodeGuru Reviewer
+  uses: aws-actions/codeguru-reviewer@v1.1
+  with:
+    build_path: target # build artifact(s) directory
+    s3_bucket: codeguru-reviewer-myactions-bucket # S3 Bucket with "codeguru-reviewer-*" prefix
